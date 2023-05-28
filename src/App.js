@@ -28,6 +28,7 @@ function App() {
     </div>
   </div>
 </nav>
+ <Navbar></Navbar>
     </>
     
   );
