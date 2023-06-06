@@ -39,3 +39,11 @@
 .blank{
   border: 1px solid red;
 }
+.primary{
+  border-radius: 7px;
+  /* margin-top: 100px; */
+}
+.ann{
+  /* border: 2px solid black; */
+  /* width: 50vw; */
+}
