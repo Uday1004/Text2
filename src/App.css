@@ -47,3 +47,27 @@
   /* border: 2px solid black; */
   /* width: 50vw; */
 }
+.Mobile-2{
+  display: block;
+    width: 115px;
+    height: 40px;
+    background: #e9373ad2;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+.Mobile-2 a{
+  color: Black;
+}
+.text-center{
+  height: 50px;
+  margin-top: 120px;
+  padding-bottom: 10px;
+  /* margin-bottom:10px; */
+}
+/* .text-center.text-dark{
+  margin-bottom: 10px;
+} */

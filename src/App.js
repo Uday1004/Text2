@@ -5,14 +5,20 @@ import TextForm from './components/TextForm';
 import About from './components/About';
 import { useState } from 'react';
 import Alerts from './components/Alerts';
-import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
+import Uuuu from './components/Uuuu'
+ 
 
-//   Route,
-//   Link
-// } from "react-router-dom";
+ 
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
+import Mobile from './components/Mobile';
 
 
 function App() {
@@ -68,38 +74,35 @@ function App() {
     }
   }
   return (
-    <>
-    {/* <Router>  */}
-      <div className='big-container' /*style={Style}*/>
-        <Navbar title='textUtils' about='About' mode={mode} togglemode={togglemode}></Navbar>
-        {/* this is button 👇for above code  */}
-        {/* <div className='text-right'>
+    <Router>
+      <>
+        <div className='big-container' /*style={Style}*/>
+          <Navbar title='textUtils' about='About' contact='Contact' mode={mode} togglemode={togglemode}></Navbar>
+
+          {/* <div className='text-right'>
        <button onClick={Black} type='button' className='btn btn-primary btn-sm float-end my-2 mx-2 '>Dark Mode!</button>
       </div> */}
-        <Alerts alert={alert} />
-        {/* <TextForm showAlert={showAlert} title='Text Area' mode={mode}/> */}
-        {/* i romove about properties'(props) for lecture purpose */}
-        {/* <Switch> */}
-          {/* <Route path="/about"> */}
-            {/* <About /> */}
-          {/* </Route> */}
-          {/* <Route path="/"> */}
-        <TextForm showAlert={showAlert} title='Text Area' mode={mode}/>
-          {/* </Route> */}
-        {/* </Switch> */}
-        {/* <div>
-          <About Team='TextUtils.Com' Developers='udaysolanki530@gmail.com' />
-        </div> */}
-      </div>
-      {/* </Router> */}
-    </>
-        
-      
-          
-      
-            
-          
 
+          <Alerts alert={alert} />
+          <TextForm title={'text Area'} mode={mode}/>
+          {/* <About/> */}
+          <Routes>
+            
+            <Route  exact path="/about" element={<About/>}>
+              {/* <TextForm showAlert={showAlert} title='Text Area' mode={mode}/> */}
+            </Route>
+            <Route path='/Contact' element={<Mobile/>}>
+
+            </Route>
+            
+          </Routes>
+          
+        </div>
+        <Uuuu/>
+      </>
+
+      
+    </Router>
 
   )
 }
@@ -107,6 +110,20 @@ function App() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default App;
- 
+
 
